@@ -15,7 +15,7 @@ export default function TextGradientScroll({ children, Tag = 'p', className }: R
     const container = useRef<HTMLParagraphElement>(null);
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ['start 0.7', 'end 0.6']
+        offset: ['start 0.7', 'end 0.7']
     });
 
     const words = children.split(' ');

@@ -10,7 +10,7 @@ export default function Input({ name, label, className, type = 'text' }: Readonl
 
     return (
         <div className="flex flex-col text-stone-900 w-full">
-            <label htmlFor={name} className="text-[1.4rem] font-bold">{label}</label>
+            <label htmlFor={name} className="text-[1.2rem] font-bold">{label}</label>
             {type === 'textarea' ? (
                 <textarea className={`${style} p-2`} name={name} rows={10} cols={35} />
             ) : (
