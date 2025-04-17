@@ -14,7 +14,7 @@ const container = {
 };
 
 const child = {
-    initial: { y: '100%' },
+    initial: { y: '200%' },
     animate: {
         y: 0,
         transition: {
@@ -28,7 +28,7 @@ export default function Hero() {
     return (
         <div>
             <div className="w-full h-[91.2vh] relative">
-                <Image src='/hero.jpg' alt='Women looking to the sky' className="object-cover" style={{ objectPosition: '50% 63%' }} quality={100} fill />
+                <Image src='/hero.webp' alt='Women looking to the sky' className="object-cover" style={{ objectPosition: '50% 63%' }} quality={100} fill />
                 <div className="w-full h-full absolute inset-0 bg-[#007AFF] opacity-50" />
 
                 <div className="absolute top-18 w-full text-center overflow-hidden">
