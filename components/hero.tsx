@@ -34,9 +34,9 @@ export default function Hero() {
                 <div className="absolute top-18 w-full text-center overflow-hidden">
                     <motion.div variants={container} initial='initial' animate='animate' className='overflow-hidden'>
                         <div className='overflow-hidden'>
-                            <motion.h3 className="font-light !text-[2.375em]" variants={child}>Design that speaks. Strategy that works.</motion.h3>
+                            <motion.h3 className="font-light !text-[2.375rem]" variants={child}>Design that speaks. Strategy that works.</motion.h3>
                         </div>
-                        <motion.h1 className="!text-[6em] font-bold max-w-[40%] mx-auto" variants={child}>Building brands with purpose</motion.h1>
+                        <motion.h1 className="!text-[6rem] font-bold max-w-[40%] mx-auto" variants={child}>Building brands with purpose</motion.h1>
                     </motion.div>
                 </div>
             </div>

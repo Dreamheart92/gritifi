@@ -10,7 +10,7 @@ export default function Footer() {
                 className="w-full h-[120vh] fixed top-0 left-0"
             >
                 <div className="w-full h-full max-w-[70%] mx-auto mt-12">
-                    <p className="!text-[2em] text-stone-900">I launched Gritifi as a studio where cultural soul meets strategic creativity. My background in graphic design and my roots in a small Bulgarian town shape everything I create — from bold brand identities to thoughtful visual systems. Whether I’m working with a local artisan or an international startup, I bring empathy, clarity, and intention to every project.</p>
+                    <p className="!text-[2rem] text-stone-900">I launched Gritifi as a studio where cultural soul meets strategic creativity. My background in graphic design and my roots in a small Bulgarian town shape everything I create — from bold brand identities to thoughtful visual systems. Whether I’m working with a local artisan or an international startup, I bring empathy, clarity, and intention to every project.</p>
 
                     <form className="max-w-[40%] mx-auto pt-12 flex flex-col gap-4 justify-center items-center">
                         <div className="flex w-full gap-2">
