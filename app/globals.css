@@ -46,35 +46,35 @@ p {
 }
 
 h1 {
-  font-size: 3.815rem;
+  font-size: 3.815em;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 3.052rem;
+  font-size: 3.052em;
   line-height: 1.3;
 }
 
 h3 {
-  font-size: 2.441rem;
+  font-size: 2.441em;
   line-height: 1.5;
 }
 
 h4 {
-  font-size: 1.953rem;
+  font-size: 1.953em;
   font-weight: normal;
 }
 
 h5 {
-  font-size: 1.563rem;
+  font-size: 1.563em;
 }
 
 h6 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 
