@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { helveticaNeue } from "@/lib/helvetica";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
