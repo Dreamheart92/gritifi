@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
 import { helveticaNeue } from "@/lib/helvetica";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,6 +13,13 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: ['200', '300', '400', '500', '600', '700'],
+  display: "swap",
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${helveticaNeue.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         {children}
       </body>
