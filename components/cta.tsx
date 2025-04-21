@@ -18,9 +18,9 @@ export default function Cta() {
     }
 
     return (
-        <div className="bg-[#FFD166] w-full flex flex-col justify-center items-center py-12">
+        <div className="bg-[#FFD166] w-full flex flex-col justify-center items-center py-24">
             <h1
-                className="text-center text-stone-900"
+                className="text-center text-stone-900 font-bold"
                 style={{
                     fontSize: 'clamp(2rem, 4vw + 1rem, 4rem)',
                 }}

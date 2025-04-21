@@ -16,7 +16,7 @@ const buttonStyles = cva('rounded-2xl cursor-pointer font-bold', {
 })
 
 const buttonSizes = {
-    primary: 'clamp(5rem, 5vh + 1rem, 10rem)',
+    primary: 'clamp(6rem, 5vw + 1rem, 10rem)',
     submit: 'clamp(3.5rem, 5vh + 1rem, 10rem)',
 }
 
@@ -26,7 +26,7 @@ export default function Button({ children, variant = 'primary', ...props }: Read
             {...props}
             className={(buttonStyles({ variant }))}
             style={{
-                width: 'clamp(8rem, 15vw + 1rem, 20rem)',
+                width: 'clamp(10rem, 15vw + 1rem, 20rem)',
                 height: buttonSizes[variant],
                 fontSize: 'clamp(1rem, 2vw, 2rem)',
             }}
