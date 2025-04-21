@@ -1,27 +1,85 @@
+'use client';
+
+import { useActionState } from "react";
 import Button from "./button";
 import Input from "./input";
+import { contact, ContactSchemaErrorType } from "@/lib/actions/contact";
+import ErrorMessage from "./error-message";
 
 export default function Footer() {
+    const [state, formAction, isPending] = useActionState(contact, {
+        data: {
+            name: '',
+            surname: '',
+            email: '',
+            message: '',
+        },
+        errors: {} as ContactSchemaErrorType,
+        success: false,
+    });
+
     return (
-        <div className="h-[100vh] relative w-full overflow-hidden"
+        <div id='contact' className="h-[100vh] relative w-full overflow-hidden"
             style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
         >
             <div
-                className="w-full h-[120vh] fixed top-0 left-0"
+                className="w-full h-[100svh] fixed top-0 left-0 "
             >
-                <div className="w-full h-full max-w-[70%] mx-auto mt-12">
-                    <p className="!text-[1.6rem] text-stone-900">I launched Gritifi as a studio where cultural soul meets strategic creativity. My background in graphic design and my roots in a small Bulgarian town shape everything I create — from bold brand identities to thoughtful visual systems. Whether I’m working with a local artisan or an international startup, I bring empathy, clarity, and intention to every project.</p>
+                <div className="w-full h-full flex flex-col justify-evenly ">
+                    <div className="max-w-[90%] lg:max-w-[70%]  mx-auto">
+                        <p className="text-stone-900 font-bolder leading-relaxed"
+                            style={{
+                                fontSize: 'clamp(0.95rem, 1vw, 1.25rem)',
+                            }}
+                        >
+                            I launched Gritifi as a studio where cultural soul meets strategic creativity. My background in graphic design and my roots in a small Bulgarian town shape everything I create — from bold brand identities to thoughtful visual systems. Whether I’m working with a local artisan or an international startup, I bring empathy, clarity, and intention to every project.</p>
+                    </div>
 
-                    <form className="max-w-[40%] mx-auto pt-12 flex flex-col gap-4 justify-center items-center">
-                        <div className="flex w-full gap-2">
-                            <Input name="name" label="Name" className="border-[#FF6B6B]" />
-                            <Input name="surname" label="Surname" className="border-[#FF6B6B] w-full flex-1" />
-                        </div>
-                        <Input name="email" label="Email" className="border-[#007AFF]" />
-                        <Input name="message" label="Message" type={'textarea'} className="border-[#FFD166]" />
+                    <div className="w-full mx-auto"
+                        style={{
+                            width: 'clamp(20rem, 50vw + 1rem, 80rem)',
+                        }}
+                    >
+                        <form className="mx-auto flex flex-col gap-4 h-full items-center" action={formAction}>
+                            <div className="flex flex-col lg:flex-row w-full gap-2">
+                                <Input
+                                    name="name"
+                                    label="Name"
+                                    className="border-[#FF6B6B]"
+                                    error={state?.errors?.fieldErrors?.name}
+                                    defaultValue={state.data.name}
+                                />
+                                <Input
+                                    name="surname"
+                                    label="Surname"
+                                    className="border-[#FF6B6B]"
+                                    error={state?.errors?.fieldErrors?.surname}
+                                    defaultValue={state.data.surname}
+                                />
+                            </div>
+                            <Input
+                                name="email"
+                                label="Email"
+                                className="border-[#007AFF]"
+                                error={state?.errors?.fieldErrors?.email}
+                                defaultValue={state.data.email}
+                            />
+                            <Input
+                                name="message"
+                                label="Message"
+                                type={'textarea'}
+                                className="border-[#FFD166]"
+                                error={state?.errors?.fieldErrors?.message}
+                                defaultValue={state.data.message}
+                            />
 
-                        <Button variant={'submit'}>Submit</Button>
-                    </form>
+                            {state?.errors?.internalError && (
+                                <ErrorMessage error={state.errors?.internalError} />
+                            )}
+
+                            <Button variant={'submit'} type='submit'>{isPending ? 'Sending...' : 'Submit'}</Button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

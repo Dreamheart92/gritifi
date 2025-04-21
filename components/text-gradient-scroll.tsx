@@ -2,8 +2,7 @@
 
 import { TypographyTagType } from "@/lib/definitions";
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
-import { MotionValue } from "motion/react";
+import { motion, useScroll, useTransform, MotionValue } from "motion/react";
 
 type TextGradientScrollProps = {
     children: string,
@@ -15,7 +14,7 @@ export default function TextGradientScroll({ children, Tag = 'p', className }: R
     const container = useRef<HTMLParagraphElement>(null);
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ['start 0.7', 'end 0.7']
+        offset: ['start 0.7', 'end 0.75']
     });
 
     const words = children.split(' ');
