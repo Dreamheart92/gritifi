@@ -35,7 +35,7 @@ export const contact = async (state: ContactState, formData: FormData) => {
     }
 
     try {
-        const response = await fetch('http://localhost:3000/api/send', {
+        const response = await fetch('/api/send', {
             method: 'POST',
             body: JSON.stringify(result.data),
         })
