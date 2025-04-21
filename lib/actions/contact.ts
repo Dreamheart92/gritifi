@@ -42,7 +42,6 @@ export const contact = async (state: ContactState, formData: FormData) => {
 
         if (!response.ok) {
             const responseJson = await response.json();
-            console.log(responseJson);
             throw new Error(responseJson?.error ?? 'Something went wrong while sending your message. Please try again later.');
         }
 

@@ -27,7 +27,7 @@ const child = {
 export default function Hero() {
     return (
         <div>
-            <div className="w-full h-[91.2vh] relative">
+            <div className="w-full h-[91.2vh] relative text-stone-100">
                 <Image src='/hero.webp' alt='Women looking to the sky' className="object-cover" style={{ objectPosition: '50% 63%' }} quality={100} fill />
                 <div className="w-full h-full absolute inset-0 bg-[#007AFF] opacity-50" />
 
