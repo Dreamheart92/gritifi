@@ -35,7 +35,7 @@ export const contact = async (state: ContactState, formData: FormData) => {
     }
 
     try {
-        const response = await fetch('/api/send', {
+        const response = await fetch('https://gritifi.netlify.app/api/send', {
             method: 'POST',
             body: JSON.stringify(result.data),
         })
@@ -46,7 +46,12 @@ export const contact = async (state: ContactState, formData: FormData) => {
         }
 
         return {
-            data: result.data,
+            data: {
+                name: '',
+                surname: '',
+                email: '',
+                message: '',
+            },
             errors: {} as ContactSchemaErrorType,
             success: true,
         }

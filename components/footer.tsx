@@ -23,21 +23,34 @@ export default function Footer() {
             style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
         >
             <div
-                className="w-full h-[100svh] fixed top-0 left-0 "
+                className="w-full h-[100svh] fixed top-0 left-0"
             >
-                <div className="w-full h-full flex flex-col justify-evenly ">
-                    <div className="max-w-[90%] lg:max-w-[70%]  mx-auto">
-                        <p className="text-stone-900 font-bolder leading-relaxed"
+                <div className="w-full h-full flex flex-col justify-center items-center"
+                    style={{
+                        gap: 'clamp(3rem, 4vw, 5rem)',
+                    }}
+                >
+                    <div className="max-w-[90%] lg:max-w-[50%] mx-auto">
+                        <h1
+                            className="text-stone-900 text-center"
+                            style={{
+                                fontSize: 'clamp(1.25rem, 2vw, 3rem)',
+                            }}
+                        >
+                            Ready to turn your vision into something real?
+                            Let’s connect and craft a brand that feels just like you...
+                        </h1>
+                        {/* <p className="text-stone-900 font-bolder leading-relaxed"
                             style={{
                                 fontSize: 'clamp(0.95rem, 1vw, 1.25rem)',
                             }}
                         >
-                            I launched Gritifi as a studio where cultural soul meets strategic creativity. My background in graphic design and my roots in a small Bulgarian town shape everything I create — from bold brand identities to thoughtful visual systems. Whether I’m working with a local artisan or an international startup, I bring empathy, clarity, and intention to every project.</p>
+                            I launched Gritifi as a studio where cultural soul meets strategic creativity. My background in graphic design and my roots in a small Bulgarian town shape everything I create — from bold brand identities to thoughtful visual systems. Whether I’m working with a local artisan or an international startup, I bring empathy, clarity, and intention to every project.</p> */}
                     </div>
 
                     <div className="w-full mx-auto"
                         style={{
-                            width: 'clamp(20rem, 50vw + 1rem, 80rem)',
+                            width: 'clamp(20rem, 50vw + 1rem, 55rem)',
                         }}
                     >
                         <form className="mx-auto flex flex-col gap-4 h-full items-center" action={formAction}>

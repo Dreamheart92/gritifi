@@ -8,9 +8,10 @@ type TextGradientScrollProps = {
     children: string,
     Tag?: TypographyTagType,
     className?: string;
+    boldText?: boolean;
 }
 
-export default function TextGradientScroll({ children, Tag = 'p', className }: Readonly<TextGradientScrollProps>) {
+export default function TextGradientScroll({ children, Tag = 'p', className, boldText = false }: Readonly<TextGradientScrollProps>) {
     const container = useRef<HTMLParagraphElement>(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -36,6 +37,7 @@ export default function TextGradientScroll({ children, Tag = 'p', className }: R
                         progress={scrollYProgress}
                         range={[start, end]}
                         index={index}
+                        boldText={boldText}
                     >
                         {word}
                     </Word>
@@ -45,30 +47,42 @@ export default function TextGradientScroll({ children, Tag = 'p', className }: R
     )
 }
 
-const Word = ({ progress, range, children, index }: {
+const Word = ({ progress, range, children, index, boldText }: {
     progress: MotionValue<number>,
     range: number[],
     children: string,
     index: number,
+    boldText: boolean,
 }) => {
-    const amount = range[1] - range[0];
-    const step = amount / children.length;
+    const opacity = useTransform(progress, range, [0, 1])
 
-    const boldIndex = index > 33 && index < 36 || index > 36;
+    // const amount = range[1] - range[0];
+    // const step = amount / children.length;
+
+    const boldIndex = boldText && (index > 33 && index < 36 || index > 36);
 
     return (
         <span
             className='relative mr-[6px]'
         >
-            {children.split('').map((char, index) => {
-                const start = range[0] + (index * step);
-                const end = range[0] + ((index + 1) * step);
-                return (
-                    <Char key={`c_${index}`} progress={progress} range={[start, end]} isBold={boldIndex}>{char}</Char>
-                )
-            })}
+            <span className='absolute inset-0 opacity-25' style={{ fontWeight: boldIndex ? 600 : 300 }}>{children}</span>
+            <motion.span style={{ opacity, fontWeight: boldIndex ? 600 : 300 }}>{children}</motion.span>
         </span>
     )
+
+    // return (
+    //     <span
+    //         className='relative mr-[6px]'
+    //     >
+    //         {children.split('').map((char, index) => {
+    //             const start = range[0] + (index * step);
+    //             const end = range[0] + ((index + 1) * step);
+    //             return (
+    //                 <Char key={`c_${index}`} progress={progress} range={[start, end]} isBold={boldIndex}>{char}</Char>
+    //             )
+    //         })}
+    //     </span>
+    // )
 }
 
 const Char = (
