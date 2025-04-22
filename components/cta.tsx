@@ -28,7 +28,7 @@ export default function Cta() {
                 Let&apos;s work together
             </h1>
 
-            <div className="flex gap-4 pt-4">
+            <div className="flex gap-4 pt-4 text-stone">
                 <Button onClick={() => handleScroll('contact')}>Contact me</Button>
                 <Button onClick={() => handleScroll('about')}>About me</Button>
             </div>

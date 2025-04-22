@@ -9,8 +9,8 @@ type ButtonProps = {
 const buttonStyles = cva('rounded-2xl cursor-pointer font-bold', {
     variants: {
         variant: {
-            primary: 'bg-[#FF6B6B] hover:bg-[#FF6B6B]/90 border-5 border-stone-100',
-            submit: 'bg-[#50E3C2] hover:bg-[#50E3C2]/90 h-[7vh]',
+            primary: 'bg-[#FF6B6B] hover:bg-[#FF6B6B]/90 border-5 border-stone-100 text-stone-100',
+            submit: 'bg-[#50E3C2] hover:bg-[#50E3C2]/90 h-[7vh] text-stone-100',
         },
     }
 })

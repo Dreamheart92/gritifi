@@ -32,7 +32,7 @@ export default function Footer() {
                 >
                     <div className="max-w-[90%] lg:max-w-[50%] mx-auto">
                         <h1
-                            className="text-stone-900 text-center"
+                            className="text-stone-900 text-center font-bolder"
                             style={{
                                 fontSize: 'clamp(1.25rem, 2vw, 3rem)',
                             }}
@@ -40,12 +40,6 @@ export default function Footer() {
                             Ready to turn your vision into something real?
                             Let’s connect and craft a brand that feels just like you...
                         </h1>
-                        {/* <p className="text-stone-900 font-bolder leading-relaxed"
-                            style={{
-                                fontSize: 'clamp(0.95rem, 1vw, 1.25rem)',
-                            }}
-                        >
-                            I launched Gritifi as a studio where cultural soul meets strategic creativity. My background in graphic design and my roots in a small Bulgarian town shape everything I create — from bold brand identities to thoughtful visual systems. Whether I’m working with a local artisan or an international startup, I bring empathy, clarity, and intention to every project.</p> */}
                     </div>
 
                     <div className="w-full mx-auto"

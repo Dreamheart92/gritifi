@@ -10,7 +10,7 @@ type InputProps = {
 }
 
 export default function Input({ name, label, className, type = 'text', error, defaultValue }: Readonly<InputProps>) {
-    const style = `border-4 rounded-2xl outline-0 ${className} font-body`;
+    const style = `border-4 rounded-2xl outline-0 ${className} font-body text-stone-900`;
     const fontSize = 'clamp(0.75rem, 1vw, 1.25rem)';
     const labelColor = error ? 'text-red-600' : 'text-stone-900';
 
@@ -39,7 +39,7 @@ export default function Input({ name, label, className, type = 'text', error, de
                     defaultValue={defaultValue}
                     style={{
                         fontSize,
-                        height: 'clamp(2rem, 4vh + 1rem, 5rem)',
+                        height: 'clamp(3rem, 4vw, 4rem)',
                     }}
                 />
             )}
