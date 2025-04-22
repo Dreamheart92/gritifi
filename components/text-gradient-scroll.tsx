@@ -85,26 +85,26 @@ const Word = ({ progress, range, children, index, boldText }: {
     // )
 }
 
-const Char = (
-    { progress, range, children, isBold }: {
-        progress: MotionValue<number>, range: number[], children: string, isBold: boolean,
-    }) => {
-    const opacity = useTransform(progress, range, [0, 1]);
+// const Char = (
+//     { progress, range, children, isBold }: {
+//         progress: MotionValue<number>, range: number[], children: string, isBold: boolean,
+//     }) => {
+//     const opacity = useTransform(progress, range, [0, 1]);
 
-    return (
-        <span>
-            <span className='absolute opacity-20'>
-                {children}
-            </span>
+//     return (
+//         <span>
+//             <span className='absolute opacity-20'>
+//                 {children}
+//             </span>
 
-            <motion.span
-                style={{
-                    opacity,
-                    fontWeight: isBold ? 600 : 300,
-                }}
-            >
-                {children}
-            </motion.span>
-        </span >
-    )
-}
+//             <motion.span
+//                 style={{
+//                     opacity,
+//                     fontWeight: isBold ? 600 : 300,
+//                 }}
+//             >
+//                 {children}
+//             </motion.span>
+//         </span >
+//     )
+// }
