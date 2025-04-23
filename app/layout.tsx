@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Hubballi } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,6 +17,13 @@ const inter = Inter({
   variable: "--font-body",
   weight: ['200', '300', '400', '500', '600', '700'],
   display: "swap",
+});
+
+const hubballi = Hubballi({
+  subsets: ["latin"],
+  weight: ['400'],
+  variable: "--font-heading",
+  display: "swap",
 })
 
 export default function RootLayout({
@@ -27,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${hubballi.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>

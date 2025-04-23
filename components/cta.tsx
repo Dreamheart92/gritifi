@@ -18,17 +18,17 @@ export default function Cta() {
     }
 
     return (
-        <div className="bg-[#FFD166] w-full flex flex-col justify-center items-center py-24">
+        <div className="bg-[#FFD166] w-full flex flex-col justify-center items-center py-8 xl:py-24">
             <h1
-                className="text-center text-stone-900 font-bold"
+                className="text-center text-stone-900 rotate-[-2.88deg] pb-4 text-[6em] px-2"
                 style={{
-                    fontSize: 'clamp(2rem, 4vw + 1rem, 4rem)',
+                    fontFamily: 'var(--font-heading)',
                 }}
             >
                 Let&apos;s work together
             </h1>
 
-            <div className="flex gap-4 pt-4 text-stone">
+            <div className="flex gap-4 pt-4 text-stone flex-wrap items-center justify-center">
                 <Button onClick={() => handleScroll('contact')}>Contact me</Button>
                 <Button onClick={() => handleScroll('about')}>About me</Button>
             </div>

@@ -32,9 +32,9 @@ export default function Footer() {
                 >
                     <div className="max-w-[90%] lg:max-w-[50%] mx-auto">
                         <h1
-                            className="text-stone-900 text-center font-bolder"
+                            className="text-center font-bolder rotate-[-2.88deg] text-[#007AFF] text-[3.3em] xl:text-[2em] 2xl:text-[2.6em]"
                             style={{
-                                fontSize: 'clamp(1.25rem, 2vw, 3rem)',
+                                fontFamily: 'var(--font-heading)',
                             }}
                         >
                             Ready to turn your vision into something real?
@@ -44,7 +44,7 @@ export default function Footer() {
 
                     <div className="w-full mx-auto"
                         style={{
-                            width: 'clamp(20rem, 50vw + 1rem, 55rem)',
+                            width: 'clamp(20rem, 50vw + 1rem, 40rem)',
                         }}
                     >
                         <form className="mx-auto flex flex-col gap-4 h-full items-center" action={formAction}>

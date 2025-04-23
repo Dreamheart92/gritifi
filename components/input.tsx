@@ -10,7 +10,7 @@ type InputProps = {
 }
 
 export default function Input({ name, label, className, type = 'text', error, defaultValue }: Readonly<InputProps>) {
-    const style = `border-4 rounded-2xl outline-0 ${className} font-body text-stone-900`;
+    const style = `border-3 rounded-2xl outline-0 ${className} font-body text-stone-900 font-bolder`;
     const fontSize = 'clamp(0.75rem, 1vw, 1.25rem)';
     const labelColor = error ? 'text-red-600' : 'text-stone-900';
 
@@ -25,7 +25,7 @@ export default function Input({ name, label, className, type = 'text', error, de
             </label>
             {type === 'textarea' ? (
                 <textarea
-                    className={`${style} p-2`} name={name} rows={7} cols={35}
+                    className={`${style} p-2`} name={name} rows={6} cols={35}
                     defaultValue={defaultValue}
                     style={{
                         fontSize,
@@ -39,7 +39,7 @@ export default function Input({ name, label, className, type = 'text', error, de
                     defaultValue={defaultValue}
                     style={{
                         fontSize,
-                        height: 'clamp(3rem, 4vw, 4rem)',
+                        height: '3.5em',
                     }}
                 />
             )}

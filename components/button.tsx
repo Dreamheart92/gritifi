@@ -6,30 +6,20 @@ type ButtonProps = {
     variant?: 'primary' | 'submit';
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-const buttonStyles = cva('rounded-2xl cursor-pointer font-bold', {
+const buttonStyles = cva('rounded-2xl cursor-pointer font-bold w-[8em]', {
     variants: {
         variant: {
-            primary: 'bg-[#FF6B6B] hover:bg-[#FF6B6B]/90 border-5 border-stone-100 text-stone-100',
-            submit: 'bg-[#50E3C2] hover:bg-[#50E3C2]/90 h-[7vh] text-stone-100',
+            primary: 'bg-[#FF6B6B] hover:bg-[#FF6B6B]/80 border-5 border-stone-100 text-stone-100 font-bold min-h-[2.1em] text-[3em] lg:text-[2.6em]',
+            submit: 'bg-[#50E3C2] hover:bg-[#50E3C2]/80  text-stone-100 min-h-[2em] text-[3em] lg:text-[1.5em] 2xl:text-[2em]',
         },
     }
 })
-
-const buttonSizes = {
-    primary: 'clamp(6rem, 5vw + 1rem, 10rem)',
-    submit: 'clamp(3.5rem, 5vh + 1rem, 10rem)',
-}
 
 export default function Button({ children, variant = 'primary', ...props }: Readonly<ButtonProps>) {
     return (
         <button
             {...props}
             className={(buttonStyles({ variant }))}
-            style={{
-                width: 'clamp(10rem, 15vw + 1rem, 20rem)',
-                height: buttonSizes[variant],
-                fontSize: 'clamp(1rem, 2vw, 2rem)',
-            }}
         >
             {children}
         </button>
