@@ -21,7 +21,7 @@ export async function POST(req: Request) {
         return NextResponse.json({ sucess: true, data })
 
     } catch (error) {
-        console.error('Error occurred while sending contact data:', error);
+        console.error('Error occurred while sending contact data: ', error);
         return NextResponse.json({ success: false, error: 'Something went wrong while sending your message. Please try again later.' }, { status: 500 })
     }
 }
