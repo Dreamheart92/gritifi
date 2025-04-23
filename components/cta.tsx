@@ -1,5 +1,6 @@
 'use client';
 
+import { CONTENT } from "@/content";
 import Button from "./button";
 import { useLenis } from "lenis/react";
 
@@ -25,7 +26,7 @@ export default function Cta() {
                     fontFamily: 'var(--font-heading)',
                 }}
             >
-                Let&apos;s work together
+                {CONTENT.CTA.title}
             </h1>
 
             <div className="flex gap-4 pt-4 text-stone flex-wrap items-center justify-center">

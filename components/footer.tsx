@@ -5,6 +5,7 @@ import Button from "./button";
 import Input from "./input";
 import { contact, ContactSchemaErrorType } from "@/lib/actions/contact";
 import ErrorMessage from "./error-message";
+import { CONTENT } from "@/content";
 
 export default function Footer() {
     const [state, formAction, isPending] = useActionState(contact, {
@@ -37,8 +38,7 @@ export default function Footer() {
                                 fontFamily: 'var(--font-heading)',
                             }}
                         >
-                            Ready to turn your vision into something real?
-                            Let’s connect and craft a brand that feels just like you...
+                            {CONTENT.FORM.title}
                         </h1>
                     </div>
 

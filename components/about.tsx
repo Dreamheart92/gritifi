@@ -4,6 +4,7 @@ import { useScroll, useTransform, motion, useSpring } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 import TextGradientScroll from "./text-gradient-scroll";
+import { CONTENT } from "@/content";
 
 export default function About() {
     const container = useRef<HTMLDivElement | null>(null);
@@ -35,11 +36,10 @@ export default function About() {
             <div className="lg:flex-1 order-1 lg:order-2 flex justify-center items-center lg:justify-start lg:items-start text-stone-100">
                 <div className="px-2 xl:max-w-[80%] 2xl:max-w-[70%] xl:mt-30 2xl:mt-70">
                     <TextGradientScroll Tag="h4" className="!font-thin text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-2xl leading-relaxed" boldText>
-                        Hi, I’m Marina — a graphic designer, visual thinker, and the founder of Gritifi. I believe great design starts with structure and ends with emotion. It’s not just about looking good — it’s about feeling right and communicating clearly.
+                        {CONTENT.ABOUT.about1}
                     </TextGradientScroll>
                     <TextGradientScroll Tag="h4" className="!font-thin text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-2xl leading-relaxed mt-6">
-                        I launched Gritifi as a studio where cultural soul meets strategic creativity.
-                        My background in graphic design and my roots in a small Bulgarian town shape everything I create — from bold brand identities to thoughtful visual systems. Whether I’m working with a local artisan or an international startup, I bring empathy, clarity, and intention to every project.
+                        {CONTENT.ABOUT.about2}
                     </TextGradientScroll>
                 </div>
             </div>
