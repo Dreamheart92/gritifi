@@ -35,7 +35,7 @@ export const contact = async (state: ContactState, formData: FormData) => {
     }
 
     try {
-        const response = await fetch('https://gritifi.netlify.app/api/send', {
+        const response = await fetch('https://gritifi.com/api/send', {
             method: 'POST',
             body: JSON.stringify(result.data),
         })
